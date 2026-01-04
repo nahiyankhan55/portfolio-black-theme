@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nahiyan Khan | Full Stack Developer Portfolio</title>
+
+    <link rel="icon" href="./assets/dev.png" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- daisy ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+      body {
+        background-color: #050505;
+        color: white;
+        font-family: "Inter", sans-serif;
+        overflow-x: hidden;
+      }
+      .purple-gradient {
+        background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%);
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .project-card:hover {
+        transform: translateY(-10px);
+        border-color: rgba(168, 85, 247, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="fixed top-0 w-full z-[100] glass border-b border-white/5">
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center gap-2">
+          <div class="text-black md:hidden flex">
+            <div class="dropdown">
+              <div
+                tabindex="0"
+                role="button"
+                class="btn btn-ghost btn-circle text-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h7"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="-1"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow flex flex-col gap-2"
+              >
+                <li>
+                  <a href="#home" class="hover:text-purple-400 transition">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="#about" class="hover:text-purple-400 transition">
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a href="#skills" class="hover:text-purple-400 transition">
+                    Skills
+                  </a>
+                </li>
+                <li>
+                  <a href="#projects" class="hover:text-purple-400 transition">
+                    Projects
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" class="hover:text-purple-400 transition">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="p-2 bg-purple-600 rounded-lg">
+              <i data-lucide="code-2" class="w-5 h-5 text-white"></i>
+            </div>
+            <span class="font-bold text-xl tracking-tighter sm:flex hidden"
+              >Nahiyan Khan</span
+            >
+          </div>
+        </div>
+
+        <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+          <a href="#home" class="hover:text-purple-400 transition">Home</a>
+          <a href="#about" class="hover:text-purple-400 transition">About</a>
+          <a href="#skills" class="hover:text-purple-400 transition">Skills</a>
+          <a href="#projects" class="hover:text-purple-400 transition">
+            Projects
+          </a>
+          <a href="#contact" class="hover:text-purple-400 transition">
+            Contact
+          </a>
+        </div>
+
+        <a
+          href="#contact"
+          class="purple-gradient px-5 py-2 rounded-full text-sm font-bold hover:scale-105 transition"
+        >
+          Let's Talk
+        </a>
+      </div>
+    </nav>
+
+    <section
+      id="home"
+      class="min-h-screen flex items-center pt-20 px-8 max-w-7xl mx-auto"
+    >
+      <div
+        class="grid md:grid-cols-2 gap-12 items-center justify-between w-full"
+      >
+        <div data-aos="fade-right">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-xs font-bold mb-6"
+          >
+            <span
+              class="w-2 h-2 bg-purple-500 rounded-full animate-pulse"
+            ></span>
+            OPEN TO WORK
+          </div>
+          <h1
+            class="xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-black mb-6"
+          >
+            I'm <span class="text-purple-500">Nahiyan</span><br />
+            <span
+              id="typed"
+              class="text-white lg:text-5xl md:text-4xl sm:text-3xl text-xl"
+            ></span>
+          </h1>
+          <p class="text-gray-400 text-lg max-w-lg mb-8 leading-relaxed">
+            I build high-performance web applications with a focus on clean code
+            and exceptional user experience.
+          </p>
+          <div class="flex gap-4 items-center flex-wrap">
+            <a
+              href="#projects"
+              class="purple-gradient px-8 py-4 rounded-2xl font-bold flex items-center gap-2 hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition"
+            >
+              View Projects <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
+            <!-- download cv btn -->
+            <a
+              href="./assets/Kushbula Ahmed Nahiyan_CV.pdf"
+              download
+              class="purple-gradient px-8 py-4 rounded-2xl font-bold flex items-center gap-2 hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition"
+            >
+              Download CV <i data-lucide="arrow-down" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="relative" data-aos="fade-left">
+          <div
+            class="absolute -inset-4 bg-purple-500 rounded-full blur-3xl opacity-10"
+          ></div>
+          <img
+            src="./01.png"
+            alt="Profile"
+            class="relative w-full max-w-md mx-auto rounded-[2rem] border border-white/10 grayscale hover:grayscale-0 transition duration-700"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-24 px-8 max-w-7xl mx-auto overflow-hidden">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div class="relative" data-aos="fade-right">
+          <div
+            class="absolute -inset-4 bg-purple-600/20 rounded-[2.5rem] blur-2xl"
+          ></div>
+          <div
+            class="relative glass rounded-[2.5rem] p-4 border border-white/10"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?fit=crop&w=800&q=80"
+              alt="Coding"
+              class="rounded-[2rem] w-full h-full object-cover shadow-2xl"
+            />
+
+            <div
+              class="absolute -bottom-6 -right-6 glass p-6 rounded-2xl border border-purple-500/30 shadow-2xl animate-bounce-slow"
+            >
+              <p class="text-purple-400 font-bold text-3xl">1+</p>
+              <p
+                class="text-xs text-gray-400 uppercase tracking-widest font-bold"
+              >
+                Years Experience
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-6" data-aos="fade-left">
+          <h4
+            class="text-purple-500 font-bold tracking-widest uppercase text-sm"
+          >
+            About Me
+          </h4>
+          <h2
+            class="md:text-3xl sm:text-2xl text-xl lg:text-5xl font-black leading-tight"
+          >
+            Bridging Design with <br />
+            <span class="text-purple-500">Full-Stack</span> Code.
+          </h2>
+
+          <p class="text-gray-400 leading-relaxed md:text-lg">
+            I am a passionate **MERN Stack Developer** from Barishal,
+            Bangladesh. My journey started in the world of visuals as a
+            **Graphic Designer**, but with my father's strong motivation, I
+            transitioned into web development. This background allows me to
+            blend creative design sense with powerful technical solutions using
+            **React, Node.js, and MongoDB**.
+          </p>
+
+          <p class="text-gray-400 leading-relaxed md:text-lg">
+            I thrive on building scalable applications and solving complex
+            problems. Outside of the terminal, I am deeply curious about new
+            technologies and disciplined in my craft. When I'm not coding, I
+            enjoy exploring new design trends or improving my fluency in
+            multiple languages.
+          </p>
+
+          <div class="grid grid-cols-2 gap-6 pt-4">
+            <div class="flex items-start gap-3">
+              <i data-lucide="check-circle" class="text-purple-500 w-6 h-6"></i>
+              <div>
+                <h5 class="font-bold">Design Sense</h5>
+                <p class="text-xs text-gray-500">Adobe PS, AI & Figma expert</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <i data-lucide="check-circle" class="text-purple-500 w-6 h-6"></i>
+              <div>
+                <h5 class="font-bold">Goal Oriented</h5>
+                <p class="text-xs text-gray-500">
+                  Disciplined & curious to grow
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="py-24 glass">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="text-center max-w-3xl mx-auto mb-20" data-aos="fade-up">
+          <h4
+            class="text-purple-500 font-bold tracking-widest uppercase text-sm mb-4"
+          >
+            My Skills
+          </h4>
+          <h2
+            class="lg:text-4xl md:text-3xl sm:text-2xl text-xl font-black mb-6"
+          >
+            The technologies I work with
+          </h2>
+          <div class="h-1.5 w-20 bg-purple-600 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="group p-8 glass rounded-3xl border border-white/5 hover:border-purple-500/50 transition-all duration-500"
+            data-aos="zoom-in"
+          >
+            <div
+              class="w-14 h-14 bg-purple-600/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+            >
+              <i data-lucide="layout" class="text-purple-500 w-8 h-8"></i>
+            </div>
+            <h3 class="font-bold text-xl mb-4">Frontend</h3>
+            <ul class="space-y-2 text-gray-400 text-sm">
+              <li class="flex justify-between">
+                <span>React.js</span> <span class="text-purple-500">90%</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Next.js</span> <span class="text-purple-500">70%</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Tailwind CSS</span>
+                <span class="text-purple-500">95%</span>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="group p-8 glass rounded-3xl border border-white/5 hover:border-blue-500/50 transition-all duration-500"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <div
+              class="w-14 h-14 bg-blue-600/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+            >
+              <i data-lucide="server" class="text-blue-500 w-8 h-8"></i>
+            </div>
+            <h3 class="font-bold text-xl mb-4">Backend</h3>
+            <ul class="space-y-2 text-gray-400 text-sm">
+              <li class="flex justify-between">
+                <span>Node.js</span> <span class="text-blue-500">80%</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Express.js</span> <span class="text-blue-500">70%</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Firebase</span> <span class="text-blue-500">70%</span>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="group p-8 glass rounded-3xl border border-white/5 hover:border-green-500/50 transition-all duration-500"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            <div
+              class="w-14 h-14 bg-green-600/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+            >
+              <i data-lucide="database" class="text-green-500 w-8 h-8"></i>
+            </div>
+            <h3 class="font-bold text-xl mb-4">Database</h3>
+            <ul class="space-y-2 text-gray-400 text-sm">
+              <li class="flex justify-between">
+                <span>MongoDB</span> <span class="text-green-500">80%</span>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="group p-8 glass rounded-3xl border border-white/5 hover:border-orange-500/50 transition-all duration-500"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
+            <div
+              class="w-14 h-14 bg-orange-600/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+            >
+              <i data-lucide="wrench" class="text-orange-500 w-8 h-8"></i>
+            </div>
+            <h3 class="font-bold text-xl mb-4">Tools</h3>
+            <ul class="space-y-2 text-gray-400 text-sm">
+              <li class="flex justify-between">
+                <span>Git & GitHub</span>
+                <span class="text-orange-500">80%</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Figma</span> <span class="text-orange-500">70%</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="py-32 px-8 max-w-7xl mx-auto">
+      <div class="flex justify-between items-end mb-16" data-aos="fade-up">
+        <div>
+          <h2 class="lg:text-4xl md:text-3xl text-2xl font-bold mb-4">
+            Latest <span class="text-purple-500">Works</span>
+          </h2>
+          <p class="text-gray-400">
+            Some of my favorite projects I've built recently.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          class="project-card glass rounded-[2rem] overflow-hidden transition-all duration-500 border border-white/5 cursor-pointer"
+          onclick="openModal('iehub')"
+          data-aos="fade-up"
+        >
+          <img
+            src="https://i.ibb.co.com/DS7jS61/iehub.jpg"
+            class="w-full h-48 object-cover"
+            alt="IE Hub"
+          />
+          <div class="p-8">
+            <h3 class="text-xl font-bold mb-3">IE Hub</h3>
+            <p class="text-gray-400 text-sm mb-6">
+              MERN based Import-Export management platform.
+            </p>
+            <button
+              class="purple-gradient px-4 py-2 rounded-xl font-bold text-sm w-full"
+            >
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="project-card glass rounded-[2rem] overflow-hidden transition-all duration-500 border border-white/5 cursor-pointer"
+          onclick="openModal('emartbd')"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <img
+            src="https://i.ibb.co.com/vxNDNnv4/emartbd.jpg"
+            class="w-full h-48 object-cover"
+            alt="E.martBD"
+          />
+          <div class="p-8">
+            <h3 class="text-xl font-bold mb-3">E.martBD</h3>
+            <p class="text-gray-400 text-sm mb-6">
+              E-commerce platform built with Next.js.
+            </p>
+            <button
+              class="purple-gradient px-4 py-2 rounded-xl font-bold text-sm w-full"
+            >
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="project-card glass rounded-[2rem] overflow-hidden transition-all duration-500 border border-white/5 cursor-pointer"
+          onclick="openModal('scholar')"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <img
+            src="https://i.ibb.co.com/RMkRL8w/scholarstream.jpg"
+            class="w-full h-48 object-cover"
+            alt="ScholarStream"
+          />
+          <div class="p-8">
+            <h3 class="text-xl font-bold mb-3">ScholarStream</h3>
+            <p class="text-gray-400 text-sm mb-6">
+              Scholarship management platform.
+            </p>
+            <button
+              class="purple-gradient px-4 py-2 rounded-xl font-bold text-sm w-full"
+            >
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="projectModal"
+        class="fixed inset-0 z-[100] hidden items-center justify-center p-4"
+      >
+        <div
+          class="absolute inset-0 bg-black/90 backdrop-blur-md"
+          onclick="closeModal()"
+        ></div>
+
+        <div
+          class="glass border border-white/10 w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-[2.5rem] relative z-10 scale-95 transition-transform duration-300 shadow-2xl"
+        >
+          <button
+            onclick="closeModal()"
+            class="absolute top-6 right-6 text-white/50 hover:text-white z-20 bg-white/10 p-2 rounded-full"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+
+          <div id="modalBody"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="py-24 glass">
+      <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-16 items-end">
+        <div data-aos="fade-right">
+          <h2 class="lg:text-4xl md:text-3xl text-2xl font-bold mb-6">
+            My <span class="text-purple-500">Skillset</span>
+          </h2>
+          <p class="text-gray-400 mb-8 leading-relaxed">
+            I use the latest technologies to ensure my projects are fast,
+            secure, and scalable.
+          </p>
+          <div class="grid grid-cols-2 gap-4">
+            <div
+              class="p-4 bg-white/5 rounded-xl border border-white/10 flex items-center gap-3"
+            >
+              <i data-lucide="zap" class="text-cyan-500 w-5 h-5"></i>
+              <span>React</span>
+            </div>
+
+            <!-- <div
+              class="p-4 bg-white/5 rounded-xl border border-white/10 flex items-center gap-3"
+            >
+              <i data-lucide="layers" class="text-white w-5 h-5"></i>
+              <span>Next.js</span>
+            </div> -->
+
+            <div
+              class="p-4 bg-white/5 rounded-xl border border-white/10 flex items-center gap-3"
+            >
+              <i data-lucide="server" class="text-green-500 w-5 h-5"></i>
+              <span>Node.js</span>
+            </div>
+
+            <div
+              class="p-4 bg-white/5 rounded-xl border border-white/10 flex items-center gap-3"
+            >
+              <i data-lucide="git-branch" class="text-gray-400 w-5 h-5"></i>
+              <span>Express.js</span>
+            </div>
+
+            <div
+              class="p-4 bg-white/5 rounded-xl border border-white/10 flex items-center gap-3"
+            >
+              <i data-lucide="database" class="text-emerald-500 w-5 h-5"></i>
+              <span>MongoDB</span>
+            </div>
+
+            <!-- <div
+              class="p-4 bg-white/5 rounded-xl border border-white/10 flex items-center gap-3"
+            >
+              <i data-lucide="flame" class="text-orange-500 w-5 h-5"></i>
+              <span>Firebase</span>
+            </div> -->
+          </div>
+        </div>
+        <div class="grid grid-cols-3 gap-6" data-aos="zoom-in">
+          <div
+            class="aspect-square glass rounded-2xl flex items-center justify-center hover:bg-purple-500/10 transition"
+          >
+            <i data-lucide="figma" class="w-10 h-10"></i>
+          </div>
+          <div
+            class="aspect-square glass rounded-2xl flex items-center justify-center hover:bg-purple-500/10 transition"
+          >
+            <i data-lucide="github" class="w-10 h-10"></i>
+          </div>
+          <div
+            class="aspect-square glass rounded-2xl flex items-center justify-center hover:bg-purple-500/10 transition"
+          >
+            <i data-lucide="monitor" class="w-10 h-10"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-32 px-8 max-w-4xl mx-auto text-center">
+      <div data-aos="fade-up">
+        <h2
+          class="lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-black mb-8"
+        >
+          Ready to start a <br /><span class="text-purple-500">project?</span>
+        </h2>
+        <p class="text-gray-400 mb-12">
+          I'm currently available for freelance work and full-time positions.
+        </p>
+
+        <form
+          action="https://formspree.io/f/xzdpwozd"
+          method="POST"
+          class="space-y-4 text-left glass sm:p-8 p-4 rounded-[2rem] border border-white/10"
+        >
+          <div class="grid md:grid-cols-2 gap-4">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              required
+              class="w-full bg-white/5 border border-white/10 p-4 rounded-xl outline-none focus:border-purple-500 transition"
+            />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+              class="w-full bg-white/5 border border-white/10 p-4 rounded-xl outline-none focus:border-purple-500 transition"
+            />
+          </div>
+
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Tell me about your project..."
+            required
+            class="w-full bg-white/5 border border-white/10 p-4 rounded-xl outline-none focus:border-purple-500 transition"
+          ></textarea>
+
+          <button
+            type="submit"
+            class="w-full purple-gradient py-4 rounded-xl font-bold text-lg hover:scale-[1.02] transition"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <footer
+      class="relative mt-20 glass border-t border-white/5 pt-16 pb-8 overflow-hidden"
+    >
+      <div
+        class="absolute -bottom-24 -left-24 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px]"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+          <div class="col-span-1 md:col-span-1 space-y-6" data-aos="fade-up">
+            <div class="flex items-center gap-2">
+              <div class="p-2 bg-purple-600 rounded-lg">
+                <i data-lucide="code-2" class="w-5 h-5 text-white"></i>
+              </div>
+              <span class="font-bold text-xl tracking-tighter uppercase"
+                >Nahiyan Khan</span
+              >
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              My goal is to create user-friendly and high-performance web
+              applications using modern technology.
+            </p>
+            <div class="flex gap-4">
+              <a
+                href="https://github.com/nahiyankhan55"
+                target="_blank"
+                class="p-2.5 glass rounded-xl hover:bg-purple-600 transition group"
+              >
+                <i
+                  data-lucide="github"
+                  class="w-5 h-5 group-hover:scale-110 transition"
+                ></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/kushbula-ahmed-nahiyan/"
+                target="_blank"
+                class="p-2.5 glass rounded-xl hover:bg-purple-600 transition group"
+              >
+                <i
+                  data-lucide="linkedin"
+                  class="w-5 h-5 group-hover:scale-110 transition"
+                ></i>
+              </a>
+              <a
+                href="https://x.com/NahiyanKha43404"
+                target="_blank"
+                class="p-2.5 glass rounded-xl hover:bg-purple-600 transition group"
+              >
+                <i
+                  data-lucide="twitter"
+                  class="w-5 h-5 group-hover:scale-110 transition"
+                ></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="space-y-6" data-aos="fade-up" data-aos-delay="100">
+            <h4 class="font-bold text-white uppercase tracking-widest text-xs">
+              Quick Links
+            </h4>
+            <ul class="space-y-3 text-gray-400 text-sm">
+              <li>
+                <a
+                  href="#home"
+                  class="hover:text-purple-400 transition flex items-center gap-2"
+                  ><i data-lucide="chevron-right" class="w-3 h-3"></i> Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#projects"
+                  class="hover:text-purple-400 transition flex items-center gap-2"
+                  ><i data-lucide="chevron-right" class="w-3 h-3"></i>
+                  Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#skills"
+                  class="hover:text-purple-400 transition flex items-center gap-2"
+                  ><i data-lucide="chevron-right" class="w-3 h-3"></i> Skills</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="hover:text-purple-400 transition flex items-center gap-2"
+                  ><i data-lucide="chevron-right" class="w-3 h-3"></i> About
+                  Me</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="space-y-6" data-aos="fade-up" data-aos-delay="200">
+            <h4 class="font-bold text-white uppercase tracking-widest text-xs">
+              Services
+            </h4>
+            <ul class="space-y-3 text-gray-400 text-sm">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-purple-500"></i> Web
+                Development
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-purple-500"></i>
+                UI/UX Design
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-purple-500"></i> API
+                Integration
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-purple-500"></i>
+                Responsive Design
+              </li>
+            </ul>
+          </div>
+
+          <div class="space-y-6" data-aos="fade-up" data-aos-delay="300">
+            <h4 class="font-bold text-white uppercase tracking-widest text-xs">
+              Contact Info
+            </h4>
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <i data-lucide="mail" class="w-5 h-5 text-purple-500 mt-1"></i>
+                <span class="text-gray-400 text-sm"
+                  >kushbuladesignmax@gmail.com</span
+                >
+              </div>
+              <div class="flex items-start gap-3">
+                <i
+                  data-lucide="map-pin"
+                  class="w-5 h-5 text-purple-500 mt-1"
+                ></i>
+                <span class="text-gray-400 text-sm">Barishal, Bangladesh</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-xs"
+        >
+          <p>
+            © 2025 <span class="text-white font-bold">Nahiyan Khan</span>. All
+            rights reserved.
+          </p>
+          <div class="flex gap-6">
+            <a href="#" class="hover:text-white transition">Privacy Policy</a>
+            <a href="#" class="hover:text-white transition">Terms of Service</a>
+          </div>
+          <p class="flex items-center gap-1">
+            Made with
+            <i
+              data-lucide="heart"
+              class="w-3 h-3 text-red-500 fill-red-500"
+            ></i>
+            in Bangladesh
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Start Lucide Icons
+      lucide.createIcons();
+
+      // Start AOS Animations
+      AOS.init({ duration: 1000, once: true });
+
+      // Typed.js Animation
+      new Typed("#typed", {
+        strings: [
+          "Frontend Developer",
+          "UI/UX Enthusiast",
+          "Full Stack Explorer",
+        ],
+        typeSpeed: 60,
+        backSpeed: 40,
+        loop: true,
+      });
+
+      const projectData = {
+        iehub: {
+          title: "IE Hub - Global Trade Management",
+          image: "https://i.ibb.co.com/DS7jS61/iehub.jpg",
+          details:
+            "A comprehensive MERN stack solution for businesses to manage their import-export operations, real-time inventory tracking, and transaction history.",
+          features: [
+            "Real-time Stock Management using MongoDB $inc",
+            "Firebase Authentication for secure user access",
+            "Dynamic data fetching with TanStack Query",
+            "Responsive inventory dashboard for admins",
+          ],
+          tech: [
+            "React.js",
+            "Node.js",
+            "Express",
+            "MongoDB",
+            "Firebase",
+            "Tailwind",
+          ],
+          github: "https://github.com/nahiyankhan55/b12a10-web",
+          live: "https://b12a10-nahiyan-ieh.netlify.app/",
+        },
+        emartbd: {
+          title: "E.martBD - Modern E-commerce",
+          image: "https://i.ibb.co.com/vxNDNnv4/emartbd.jpg",
+          details:
+            "A high-performance e-commerce platform focusing on speed and user experience, built with the latest Next.js features.",
+          features: [
+            "JWT-based session handling with NextAuth",
+            "Google & Credentials based OAuth integration",
+            "Complex Product Filtering & Search system",
+            "Optimized Image handling using Next/Image",
+          ],
+          tech: [
+            "Next.js 16",
+            "React",
+            "Node",
+            "Node",
+            "NextAuth",
+            "MUI",
+            "Tailwind CSS",
+          ],
+          github: "https://github.com/nahiyankhan55/ejp-nextjs-task-client",
+          live: "https://ejp12b-nextjs-task-web-nahiyan-ecommerce1128.vercel.app/",
+        },
+        scholar: {
+          title: "ScholarStream - Education Funding",
+          image: "https://i.ibb.co.com/RMkRL8w/scholarstream.jpg",
+          details:
+            "A role-based scholarship management system designed to bridge the gap between students and scholarship providers.",
+          features: [
+            "Role-based Dashboard (Student, Moderator, Admin)",
+            "Secure Payment Gateway integration with Stripe",
+            "Interactive analytics using Recharts",
+            "Admin control for scholarship verification",
+          ],
+          tech: [
+            "React.js",
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "Stripe API",
+            "JWT",
+            "Recharts",
+          ],
+          github: "https://github.com/nahiyankhan55/b12a11-web",
+          live: "https://scholarstream-b12a11-nahiyan.netlify.app/",
+        },
+      };
+
+      function openModal(id) {
+        const modal = document.getElementById("projectModal");
+        const body = document.getElementById("modalBody");
+        const data = projectData[id];
+
+        body.innerHTML = `
+    <div class="p-2">
+      <img src="${
+        data.image
+      }" class="w-full h-64 md:h-96 object-cover rounded-[2rem] shadow-2xl" />
+    </div>
+    
+    <div class="p-8">
+      <div class="flex flex-wrap items-center justify-between gap-4 mb-8">
+        <div>
+           <h3 class="text-3xl font-bold text-white mb-2">${data.title}</h3>
+           <div class="flex gap-2">
+              ${data.tech
+                .slice(0, 3)
+                .map(
+                  (t) =>
+                    `<span class="text-xs text-purple-400 font-medium">#${t}</span>`
+                )
+                .join("")}
+           </div>
+        </div>
+        <div class="flex gap-3">
+          <a href="${
+            data.github
+          }" target="_blank" class="px-5 py-2.5 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 transition flex items-center gap-2 text-sm">
+             <i data-lucide="github" class="w-4 h-4"></i> GitHub
+          </a>
+          <a href="${
+            data.live
+          }" target="_blank" class="purple-gradient px-6 py-2.5 rounded-xl font-bold shadow-lg shadow-purple-500/20 flex items-center gap-2 text-sm">
+             <i data-lucide="external-link" class="w-4 h-4"></i> Live Demo
+          </a>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-8">
+        <div>
+          <h4 class="text-white font-semibold mb-3 flex items-center gap-2">
+             <span class="w-8 h-1 bg-purple-500 rounded-full"></span> Project Overview
+          </h4>
+          <p class="text-gray-400 leading-relaxed mb-6">${data.details}</p>
+          
+          <h4 class="text-white font-semibold mb-3 flex items-center gap-2">
+             <span class="w-8 h-1 bg-purple-500 rounded-full"></span> Core Features
+          </h4>
+          <ul class="space-y-2">
+            ${data.features
+              .map(
+                (f) => `
+              <li class="flex items-start gap-2 text-gray-400 text-sm">
+                <span class="text-purple-500 mt-1">✔</span> ${f}
+              </li>
+            `
+              )
+              .join("")}
+          </ul>
+        </div>
+
+        <div class="w-full">
+         <h4 class="text-white font-semibold mb-4 flex items-center gap-2">
+          <span class="w-8 h-1 bg-purple-500 rounded-full"></span> Technologies
+         </h4>
+         <div class="flex flex-wrap gap-3"> ${data.tech
+           .map(
+             (t) => `
+            <span class="inline-block px-4 py-2 bg-white/5 rounded-xl border border-white/10 text-sm text-gray-300 hover:border-purple-500/50 hover:bg-white/10 transition-all duration-300">
+             ${t}
+            </span> `
+           )
+           .join("")}
+         </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+        // Lucide আইকনগুলো আবার রেন্ডার করার জন্য (যদি ভেতরে আইকন থাকে)
+        lucide.createIcons();
+
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        document.body.style.overflow = "hidden";
+      }
+      function closeModal() {
+        const modal = document.getElementById("projectModal");
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+        document.body.style.overflow = "auto"; // Scroll পুনরায় চালু করার জন্য
+      }
+    </script>
+  </body>
+</html>
